@@ -1,0 +1,64 @@
+﻿<Page x:Class="AnalizaMorfologicznaObrazow_WPF.FiltryXY"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AnalizaMorfologicznaObrazow_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" Width="820"      Title="FiltryXY">
+
+    <Grid Margin="0,0,12,8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="309"/>
+            <RowDefinition Height="133"></RowDefinition>
+            <RowDefinition Height="68"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="18"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="ImgPhoto"  Stretch="Uniform" Grid.Column="1" HorizontalAlignment="Left" Height="262" Margin="26,25,0,0" Grid.Row="1" VerticalAlignment="Top" Width="300"/>
+        <Label Content="Orginal Image" Grid.Column="1" HorizontalAlignment="Left" Margin="77,2,0,0" VerticalAlignment="Top" Width="108" Height="28"/>
+        <Label Content="Result Image" Grid.Column="3" HorizontalAlignment="Left" Margin="95,2,0,0" VerticalAlignment="Top" Width="108" Height="28"/>
+        <Button x:Name="BtnLoad" Content="Load Image" Grid.Column="1" Grid.Row="2" RenderTransformOrigin="1.026,0.696" Margin="26,39,252,53" Click="BtnLoad_Click"/>
+        <ListBox x:Name="XFilter" Grid.Column="1" HorizontalAlignment="Left" Margin="230,39,0,21" Grid.Row="2" Width="130" RenderTransformOrigin="0.547,1.481" Grid.ColumnSpan="2">
+            <ListBoxItem>Laplacian3x3</ListBoxItem>
+            <ListBoxItem>Laplacian5x5</ListBoxItem>
+            <ListBoxItem>LaplacianOfGaussian</ListBoxItem>
+            <ListBoxItem>Gaussian3x3</ListBoxItem>
+            <ListBoxItem>Gaussian5x5Type1</ListBoxItem>
+            <ListBoxItem>Gaussian5x5Type2</ListBoxItem>
+            <ListBoxItem>Sobel3x3Horizontal</ListBoxItem>
+            <ListBoxItem>Sobel3x3Vertical</ListBoxItem>
+            <ListBoxItem>Prewitt3x3Horizontal</ListBoxItem>
+            <ListBoxItem>Prewitt3x3Vertical</ListBoxItem>
+            <ListBoxItem>Kirsch3x3Horizontal</ListBoxItem>
+            <ListBoxItem>Kirsch3x3Vertical</ListBoxItem>
+        </ListBox>
+        <ListBox x:Name="YFilter" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Margin="66,39,0,21" Grid.Row="2" Width="126">
+            <ListBoxItem>Laplacian3x3</ListBoxItem>
+            <ListBoxItem >Laplacian5x5</ListBoxItem>
+            <ListBoxItem>LaplacianOfGaussian</ListBoxItem>
+            <ListBoxItem>Gaussian3x3</ListBoxItem>
+            <ListBoxItem>Gaussian5x5Type1</ListBoxItem>
+            <ListBoxItem>Gaussian5x5Type2</ListBoxItem>
+            <ListBoxItem>Sobel3x3Horizontal</ListBoxItem>
+            <ListBoxItem>Sobel3x3Vertical</ListBoxItem>
+            <ListBoxItem>Prewitt3x3Horizontal</ListBoxItem>
+            <ListBoxItem>Prewitt3x3Vertical</ListBoxItem>
+            <ListBoxItem>Kirsch3x3Horizontal</ListBoxItem>
+            <ListBoxItem>Kirsch3x3Vertical</ListBoxItem>
+        </ListBox>
+        <Label Content="X Filter" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="236,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="124" Grid.ColumnSpan="2"/>
+        <Label Content="Y Filter" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="66,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="126" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImgResult"  Stretch="Uniform" Grid.Column="3" HorizontalAlignment="Left" Height="262" Margin="26,25,0,0" Grid.Row="1" VerticalAlignment="Top" Width="300"/>
+        <Button x:Name="BtnApply" Content="Apply Filters" Grid.Column="3" Grid.Row="2" RenderTransformOrigin="1.026,0.696" Margin="226,39,52,0" Click="BtnApply_Click" Height="33" VerticalAlignment="Top"/>
+        <Slider x:Name="ThresholdSlider" Grid.Column="1" Margin="236,10,198,6" Grid.Row="3" Grid.ColumnSpan="3" Maximum="255" SmallChange="1" Value="100"/>
+        <Label Content="Threshold" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="136,6,0,0" Grid.Row="3" VerticalAlignment="Top" Width="78"/>
+        <Button x:Name="BtnSaveResult" Content="Save Result" Grid.Column="3" HorizontalAlignment="Left" Margin="226,83,0,11" Grid.Row="2" Width="72" Click="BtnSaveResult_Click"/>
+    </Grid>
+</Page>
