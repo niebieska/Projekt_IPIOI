@@ -9,8 +9,8 @@
     <Grid>
         <Image Source="/Resources/Sample_ready.jpg" ></Image>
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Button x:Name="BtnFiltryXY" Content="FiltryXY" Width="100" Click="BtnClickFiltry" />
-            <Button x:Name="BtnPodstawyMorfologi" Content="Podstawy Morfologi" Width="120" Margin="10,0,0,0" Click="BtnClickPodstawyMorfologi" />
+            <Button x:Name="BtnFiltryXY" Content="FiltersXY" Width="100" Click="BtnClickFiltry" />
+            <Button x:Name="BtnPodstawyMorfologi" Content="Morphology Basics" Width="120" Margin="10,0,0,0" Click="BtnClickPodstawyMorfologi" />
         </StackPanel>
        
         <Frame x:Name="Main" Margin="0,35,0,0"  NavigationUIVisibility="Hidden"/>

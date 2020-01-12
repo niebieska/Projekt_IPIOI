@@ -95,22 +95,24 @@ namespace AnalizaMorfologicznaObrazow_WPF
 
                     if (Int32.TryParse(s, out filterSize))
                         
+
                     {
+                       
                         if (rdDilate.IsChecked == true)
                         {
-                           // bitmapResult = selectedSource.DilateAndErodeFilter(filterSize, ExtBitmap.MorphologyType.Dilation, chkB.IsChecked, chkG.IsChecked, chkR.IsChecked, edgeType);
+                            bitmapResult = selectedSource.DilateAndErodeFilter(filterSize, ExtBitmap.MorphologyType.Dilation, (bool)chkB.IsChecked, (bool)chkG.IsChecked, (bool)chkR.IsChecked, edgeType);
                         }
                         else if (rdErode.IsChecked == true)
                         {
-                            //bitmapResult = selectedSource.DilateAndErodeFilter(filterSize, ExtBitmap.MorphologyType.Erosion, chkB.IsChecked, chkG.IsChecked, chkR.IsChecked, edgeType);
+                            bitmapResult = selectedSource.DilateAndErodeFilter(filterSize, ExtBitmap.MorphologyType.Erosion, (bool)chkB.IsChecked, (bool)chkG.IsChecked, (bool)chkR.IsChecked, edgeType);
                         }
                         else if (rdOpen.IsChecked == true)
                         {
-                            bitmapResult = selectedSource.OpenMorphologyFilter(filterSize);
+                            bitmapResult = selectedSource.OpenMorphologyFilter(filterSize, (bool)chkB.IsChecked, (bool)chkG.IsChecked, (bool)chkR.IsChecked);
                         }
                         else if (rdClose.IsChecked == true)
                         {
-                            bitmapResult = selectedSource.CloseMorphologyFilter(filterSize);
+                            bitmapResult = selectedSource.CloseMorphologyFilter(filterSize, (bool)chkB.IsChecked, (bool)chkG.IsChecked, (bool)chkR.IsChecked);
                         }
                     }
                 }
@@ -145,7 +147,18 @@ namespace AnalizaMorfologicznaObrazow_WPF
             }
         }
 
+       
         private void cmbFilterSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ApplyFilter(true); MessageBox.Show("I'm comming home !");
+        }
+
+        private void FilterValueChangedEventHandler(object sender, SelectionChangedEventArgs e)
+        {
+            ApplyFilter(true);
+        }
+
+        private void FilterValueChangedEventHandler(object sender, RoutedEventArgs e)
         {
             ApplyFilter(true);
         }
