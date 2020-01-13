@@ -186,9 +186,7 @@ namespace AnalizaMorfologicznaObrazow_WPF
                 int calcOffset = 0;
 
                 int byteOffset = 0;
-                String zmienna = "";
-                int zm = bmp.Height - filterOffset;
-
+                
                 for (int offsetY = filterOffset; offsetY < bmp.Height - filterOffset; offsetY++)
                 {
                     for (int offsetX = filterOffset; offsetX < bmp.Width - filterOffset; offsetX++)
@@ -260,8 +258,7 @@ namespace AnalizaMorfologicznaObrazow_WPF
                     }
 
                 }
-
-
+               
                 Bitmap resultbitmap = new Bitmap(bmp.Width, bmp.Height);
 
                 BitmapData resultData = resultbitmap.LockBits(new Rectangle(0, 0, resultbitmap.Width, resultbitmap.Height),
@@ -271,7 +268,7 @@ namespace AnalizaMorfologicznaObrazow_WPF
                 Marshal.Copy(resultbuff, 0, resultData.Scan0, resultbuff.Length);
                 resultbitmap.UnlockBits(resultData);
                 ImgResult.Source = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(resultbitmap.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-
+               
             }
 
             else

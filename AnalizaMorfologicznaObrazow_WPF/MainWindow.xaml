@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnalizaMorfologicznaObrazow_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="Project IPIOI" Height="600" Width="800" Icon="hobbies-and-free-time.ico" Visibility="Visible">
     <Grid>
-        <Image Source="/Resources/Sample_ready.jpg" ></Image>
-        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+       
+
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <Button x:Name="BtnFiltryXY" Content="FiltersXY" Width="100" Click="BtnClickFiltry" />
             <Button x:Name="BtnPodstawyMorfologi" Content="Morphology Basics" Width="120" Margin="10,0,0,0" Click="BtnClickPodstawyMorfologi" />
+            <Button x:Name="BtnRecognition"  Content ="Image Processing Recognition" Width="190"  Margin="10,0,0,0" RenderTransformOrigin="0.636,0.486" Click="BtnRecognition_Click"/>
         </StackPanel>
-       
-        <Frame x:Name="Main" Margin="0,35,0,0"  NavigationUIVisibility="Hidden"/>
+
+        <Frame x:Name="Main" Margin="0,35,0,0"  NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" Content=""/>
+        <Label x:Name="label_preview" Content="Projekt w ramach kursu Inżynieria pozyskiwania i ochrony informacji&#xD;&#xA;Temat :  Analiza morfologiczna obrazów&#xD;&#xA; - morfologiczne ukrywanie i wykrywanie krawędzi obiektów" HorizontalAlignment="Left" Height="101" Margin="82,97,0,0" VerticalAlignment="Top" Width="625" FontFamily="Segoe UI Black" FontSize="18" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
     </Grid>
 </Window>

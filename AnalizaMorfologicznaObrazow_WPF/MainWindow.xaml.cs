@@ -28,11 +28,19 @@ namespace AnalizaMorfologicznaObrazow_WPF
         private void BtnClickFiltry(object sender, RoutedEventArgs e)
         {
             Main.Content = new FiltryXY();
+            label_preview.Visibility = Visibility.Hidden;
         }
 
         private void BtnClickPodstawyMorfologi(object sender, RoutedEventArgs e)
         {
             Main.Content = new PodstawyMorfologi();
+            label_preview.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnRecognition_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new ImageProcessingRecognition();
+            label_preview.Visibility = Visibility.Hidden;
         }
     }
 }

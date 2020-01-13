@@ -16,3 +16,6 @@ C:\Users\Paulinka\source\repos\AnalizaMorfologicznaObrazow_WPF\AnalizaMorfologic
 C:\Users\Paulinka\source\repos\AnalizaMorfologicznaObrazow_WPF\AnalizaMorfologicznaObrazow_WPF\obj\Debug\AnalizaMorfologicznaObrazow_WPF.pdb
 C:\Users\Paulinka\source\repos\AnalizaMorfologicznaObrazow_WPF\AnalizaMorfologicznaObrazow_WPF\obj\Debug\MorphologyBasics.g.cs
 C:\Users\Paulinka\source\repos\AnalizaMorfologicznaObrazow_WPF\AnalizaMorfologicznaObrazow_WPF\obj\Debug\MorphologyBasics.baml
+C:\Users\Paulinka\source\repos\AnalizaMorfologicznaObrazow_WPF\AnalizaMorfologicznaObrazow_WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Paulinka\source\repos\AnalizaMorfologicznaObrazow_WPF\AnalizaMorfologicznaObrazow_WPF\obj\Debug\ImageProcessingRecognition.g.cs
+C:\Users\Paulinka\source\repos\AnalizaMorfologicznaObrazow_WPF\AnalizaMorfologicznaObrazow_WPF\obj\Debug\ImageProcessingRecognition.baml

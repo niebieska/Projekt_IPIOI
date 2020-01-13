@@ -87,7 +87,6 @@ namespace AnalizaMorfologicznaObrazow_WPF
                     int filterSize = 0;
 
                     ExtBitmap.MorphologyEdgeType edgeType = ((ExtBitmap.MorphologyEdgeType)cmbEdgeOptions.SelectedItem);
-                    MessageBox.Show(cmbFilterSize.SelectedItem.ToString() + "" + Int32.TryParse(cmbFilterSize.SelectedItem.ToString(), out filterSize) );
                     int a = cmbFilterSize.SelectedItem.ToString().Length;
                      String s = cmbFilterSize.SelectedItem.ToString().Replace("System.Windows.Controls.ComboBoxItem:","");
 
