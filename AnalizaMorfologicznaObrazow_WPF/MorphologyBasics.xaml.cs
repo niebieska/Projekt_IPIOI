@@ -149,7 +149,7 @@ namespace AnalizaMorfologicznaObrazow_WPF
        
         private void cmbFilterSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ApplyFilter(true); MessageBox.Show("I'm comming home !");
+            ApplyFilter(true); 
         }
 
         private void FilterValueChangedEventHandler(object sender, SelectionChangedEventArgs e)
